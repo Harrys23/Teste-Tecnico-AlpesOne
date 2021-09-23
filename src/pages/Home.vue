@@ -1,15 +1,15 @@
 <template>
   <Navbar />
-  <SolicitationButton />
 </template>
 
 <script>
-import { Navbar, SolicitationButton } from "../components/index.js";
+import Navbar from "../components/mobile/navbar/Navbar.vue";
 
 export default {
+  name: "Home",
+
   components: {
     Navbar,
-    SolicitationButton,
   },
 };
 </script>
