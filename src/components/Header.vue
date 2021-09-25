@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="headerContainer">
     <div class="phone">
       <svg
         id="Camada_1"
@@ -60,26 +60,39 @@
       </svg>
     </div>
   </div>
+
+  <SolicitationButton :isRequested="isRequested" />
 </template>
 
 <script>
+import SolicitationButton from "../components/SolicitationButton.vue";
 export default {
-  name: "Navbar",
+  name: "Header",
+  components: {
+    SolicitationButton,
+  },
 
-  component: {},
+  props: {
+    isRequested: Boolean,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/styles/_variables.scss";
 
-.container {
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
 
   height: 6rem;
-  padding: 1rem;
+  width: 100vw;
+  padding: 1rem 2rem;
+
+  background-color: $bg;
 
   .phone {
     display: flex;
@@ -93,6 +106,8 @@ export default {
     p {
       margin-left: 0.6rem;
       color: $gray;
+      font-size: 1.4rem;
+      font-weight: bold;
     }
   }
 
@@ -102,6 +117,14 @@ export default {
     svg {
       width: 3.4rem;
       height: 3.4rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .headerContainer {
+    .phone {
+      display: none;
     }
   }
 }

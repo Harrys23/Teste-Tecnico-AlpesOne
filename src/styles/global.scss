@@ -1,5 +1,22 @@
 @import "./variables";
 
+@font-face {
+  font-family: "BMWTypeNext Pro";
+  src: local("BMWTypeNextPro-Bold")
+    url("/public/assets/fonts/BMWTypeNext-Bold.20210426144302.ttf")
+    format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "BMWTypeNext Pro";
+  src: local("BMWTypeNextPro-light"),
+    local("BMWTypeNextPro") local("BMWTypeNext Pro")
+      url("/public/assets/fonts/BMWTypeNext-Light.20210426144302.ttf")
+      format("truetype");
+  font-weight: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,5 +36,7 @@ body,
 input,
 button,
 textarea {
-  font: 400 1.6rem sans-serif;
+  font-family: "BMWTypeNext Pro";
+  font-weight: normal;
+  font-size: 1.6rem;
 }

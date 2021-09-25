@@ -1,13 +1,17 @@
 <template>
-  <Home />
+  <Body />
+  <Footer />
 </template>
 
 <script>
-import Home from "./pages/Home.vue";
+import Body from "./pages/Body.vue";
+import Footer from "./components/Footer.vue";
+
 export default {
   name: "App",
   components: {
-    Home,
+    Body,
+    Footer,
   },
 };
 </script>
