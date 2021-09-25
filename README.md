@@ -1,4 +1,4 @@
-# Teste-Tecnico-AlpesOne
+# Teste Técnico AlpesOne
 
 ## Project setup
 ```
